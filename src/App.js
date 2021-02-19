@@ -3,6 +3,8 @@ import './App.css';
 import axios from 'axios';
 import {BASE_URL} from './constants/constants';
 import Characters from './components/Character';
+import { ThemeProvider } from 'styled-components';
+import theme from './theme/theme';
 
 const App = () => {
   
@@ -28,10 +30,12 @@ const App = () => {
   // sync up with, if any.
 
   return (
-    <div className="App">
-      <h1 className="Header">The Bad Batch</h1>
-      <Characters characters={characters}/>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <h1 className="Header">The Bad Batch</h1>
+        <Characters characters={characters}/>
+      </div>
+    </ThemeProvider>
   );
 }
 

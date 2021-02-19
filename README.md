@@ -30,11 +30,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React JS is a javascript library that can create components using JSX which allows a developer to use html and javascript in the same code block. Components can be copied and modified so that one doesn't have to hard code another section or for example a styled button. React also helps with giving components states which can then be passed down to another state which would then be able to communicate with each other.
+
 1. Describe component state.
+
+Component state is where you store property values that comes from the component. For example we can make a component for a counter and set the state of this counter to 0. The state of the counter can change if we include a function to increase or decrease and once the state changes the component will rerender.
 
 1. Describe props.
 
+Props is passing down component arguments such as state, data or some other value to child components. Props cannot be passed back up to parent components
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+Side effects is updating the component or its state using a function based on when the component is mounted or rerendered. The useEffect has to be placed inside the component level so that it can reach the state variales.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
