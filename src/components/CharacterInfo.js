@@ -9,7 +9,8 @@ const InnerDiv = styled.div`
     color: white;
 
     h1{
-        color: ${props => props.theme.lukeColor};
+        color: ${props => props.danger ? props.theme.lukeColor : 'white'};
+               ${props => props.c3 ? props.theme.gold : 'red'}
         transition: ${props => props.theme.transtion2s};
 
         &:hover{
@@ -17,6 +18,10 @@ const InnerDiv = styled.div`
             transition: ${props => props.theme.transtion2s};
         }
     }
+`
+
+const SecondDiv = styled.div`
+    display: block;
 `
 
 const Break = styled.div`
@@ -28,19 +33,23 @@ const Break = styled.div`
 
 const CharacterInfo = (props) => {
 
+
 const {character} = props;
 
     return(
         <>
-            <InnerDiv>
-                <h1>{character.name}</h1>
-                <h5>Height: {character.height}</h5>
-                <h5>Weight: {character.mass}</h5>
-                <h5>Hair-color: {character.hair_color}</h5>
-                <h5>Skin-color: {character.skin_color}</h5>
-                <h5>Eye-color: {character.eye_color}</h5>
-                <h5>Birth: {character.birth_year}</h5>
-                <h5>Gender: {character.gender}</h5>
+            <InnerDiv danger={character.name === "Luke Skywalker"} 
+                        c3={character.name === "C-3PO"}>
+                <h1 >{character.name}</h1>
+                <SecondDiv>
+                    <h5>Height: {character.height}</h5>
+                    <h5>Weight: {character.mass}</h5>
+                    <h5>Hair-color: {character.hair_color}</h5>
+                    <h5>Skin-color: {character.skin_color}</h5>
+                    <h5>Eye-color: {character.eye_color}</h5>
+                    <h5>Birth: {character.birth_year}</h5>
+                    <h5>Gender: {character.gender}</h5>
+                </SecondDiv>
             </InnerDiv>
             <Break></Break>
     </>
