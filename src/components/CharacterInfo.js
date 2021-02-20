@@ -7,10 +7,11 @@ const InnerDiv = styled.div`
     margin: 0px auto;
     padding: 5px;
     color: white;
+    border-radius: 10%;
 
     h1{
         color: ${props => props.danger ? props.theme.lukeColor : 'white'};
-               ${props => props.c3 ? props.theme.gold : 'red'}
+               /* ${props => props.c3 ? props.theme.gold : 'red'} */
         transition: ${props => props.theme.transtion2s};
 
         &:hover{
