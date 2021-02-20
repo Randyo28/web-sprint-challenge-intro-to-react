@@ -18,7 +18,7 @@ const ContainerDiv = styled.div`
     /* background: rgba(0, 0, 0, 0.1); */
     width: 75%;
     display: inline-block;
-    animation: ${kf} 1s ease-in;
+    animation: ${kf} 2s ease-in-out;
     margin-bottom: 30px;
 `
 
